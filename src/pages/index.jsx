@@ -1,7 +1,7 @@
 import Head from "next/head";
 import { Inter } from "@next/font/google";
-import { use, useState } from "react";
-import { useEffect, useCallback } from "react";
+import { useState } from "react";
+import hurelsuh from "../../public/assets/hurelsuh.jpg";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -23,6 +23,8 @@ export default function Home() {
     }
   };
 
+  console.log(hurelsuh.src)
+
   // const HandleKeyDown = (e) => {
   //   if (e.key === "Enter") {
   //     return CheckSum(sum);
@@ -32,7 +34,7 @@ export default function Home() {
   // useEffect(() => {
   //   HandleKeyDown;
   // }, []);
-  
+
   return (
     <>
       <Head>
@@ -82,7 +84,8 @@ export default function Home() {
           ) : (
             <div className="w-[500px] animate-shake">
               <img
-                src="https://upload.wikimedia.org/wikipedia/commons/4/4b/Mongolian_Prime_Minister_Khurelsukh_Ukhnaa_in_2018.jpg"
+                // src="https://upload.wikimedia.org/wikipedia/commons/4/4b/Mongolian_Prime_Minister_Khurelsukh_Ukhnaa_in_2018.jpg"
+                src={hurelsuh.src}
                 alt=""
               />
             </div>
